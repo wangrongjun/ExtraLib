@@ -1,0 +1,5 @@
+include ':material_dialog', ':sliding_menu', ":image_cache", ":qr_scan"
+include ':MyLib'
+project(':MyLib').projectDir = new File('../MyLib/')
+include ':MyLib:java_lib'
+include ':MyLib:android_lib'

@@ -12,6 +12,9 @@ import com.wang.android_lib.util.ScreenUtil;
  */
 public class SlidingMenuUtil {
 
+    /**
+     * 使用：在Activity中创建后，设置背景，并调用toggle显示。
+     */
     public static SlidingMenu buildDefault(Activity activity, int layoutRes) {
         SlidingMenu menu = new SlidingMenu(activity);
 //        设置侧滑菜单的位置，可选值LEFT , RIGHT , LEFT_RIGHT （两边都有菜单时设置）

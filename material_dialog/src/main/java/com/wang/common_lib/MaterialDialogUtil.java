@@ -24,7 +24,20 @@ public class MaterialDialogUtil {
         void onInputFinish(String input);
     }
 
-    public static void showComfirm(Context context, String title, String message,
+    public static void showConfirm(Context context, String title, String message) {
+
+        final MaterialDialog dialog = new MaterialDialog(context);
+        dialog.setTitle(title).setMessage(message);
+        dialog.setPositiveButton("确认", new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+    }
+
+    public static void showConfirm(Context context, String title, String message,
                                    final OnConfirmClickListener listener) {
 
         final MaterialDialog dialog = new MaterialDialog(context);
@@ -56,7 +69,7 @@ public class MaterialDialogUtil {
 
         final MaterialDialog dialog = new MaterialDialog(context);
         dialog.setTitle(title).setContentView(editText);
-        dialog.setCanceledOnTouchOutside(true);
+//        dialog.setCanceledOnTouchOutside(true);
         dialog.setPositiveButton("确认", new View.OnClickListener() {
             @Override
             public void onClick(View v) {
